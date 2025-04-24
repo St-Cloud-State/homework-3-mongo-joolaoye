@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Processing System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="loadPendingApplications()">
+
+    <section class="app">
+        <aside class="sidebar">
+            <header>
+                Acme Financial Corp
+            </header>
+          <nav class="sidebar-nav">
+       
+            <ul>
+                <li>
+                    <a href="{{ url_for('accept_application_page') }}"><span>Accept an application</span></a>
+                  </li>
+              <li>
+                <a href="{{ url_for('create_application_page') }}"><span>Create an application</span></a>
+              </li>
+              <li>
+                <a href="{{ url_for('pending_applications') }}"><span>Pending applications</span></a>
+              </li>
+              <li>
+                <a href="{{ url_for('reject_application_page') }}"><span>Reject an application</span></a>
+              </li>
+              <li>
+                <a href="{{ url_for('view_application_notes') }}"><span>View an application notes</span></a>
+              </li>
+            </ul>
+            <hr class="solid">
+          </nav>
+        </aside>
+    </section>
+
+    <div class="container">
+      <h2>Applications</h2>
+      <table id="applicationsTable">
+          <thead>
+          <tr>
+              <th>Application ID</th>
+              <th>Applicant Name</th>
+              <th>Applicant Address</th>
+          </tr>
+          </thead>
+          <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="snackbar" class="snackbar"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

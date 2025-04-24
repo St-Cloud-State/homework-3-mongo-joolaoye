@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="loadNotes()">
 
     <section class="app">
       <aside class="sidebar">
@@ -37,6 +37,13 @@
         </nav>
       </aside>
     </section>
+
+    <div class="container">
+        <div class="notes-page">
+            <h2>Application Notes</h2>
+            <div id="notesContainer" class="notes-container"></div>
+        </div>
+    </div>
 
     <div id="snackbar" class="snackbar"></div>
 

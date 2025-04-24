@@ -38,6 +38,27 @@
       </aside>
     </section>
 
+    <div class="container">
+        <div class="card">
+            <h2>Accept an Application</h2>
+            <div class="input-group">
+                <label for="applicationID">Application ID</label>
+                <input type="text" id="applicationID" placeholder="Enter application ID">
+            </div>
+            <div class="note-toggle input-group">
+                <span>Add Note</span>
+                <button id="toggleNote" onclick="toggleNoteArea()" class="icon-button"><i class="fa fa-plus"></i></button>
+            </div>
+            <div id="noteArea">
+                <div class="input-group">
+                    <textarea placeholder="Add note here..." type="text" id="note" required></textarea>
+                </div>
+                <button onclick="addNote()">Submit</button>
+            </div>
+            <button id= "acceptButton" onclick="updateStatus('accepted')">Accept Application</button>
+        </div>
+    </div>
+
     <div id="snackbar" class="snackbar"></div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

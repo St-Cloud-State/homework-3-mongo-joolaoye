@@ -38,6 +38,17 @@
       </aside>
     </section>
 
+    <div class="container">
+        <div class="card">
+            <h2>View Application Notes</h2>
+            <div class="input-group">
+                <label for="applicationID">Application Number</label>
+                <input type="text" id="applicationID" placeholder="Enter application number">
+            </div>
+            <button onclick="getNotes()">Submit</button>
+        </div>
+    </div>
+
     <div id="snackbar" class="snackbar"></div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>

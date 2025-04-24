@@ -38,6 +38,21 @@
       </aside>
     </section>
 
+    <div class="container">
+        <div class="card">
+            <h2>Reject an Application</h2>
+            <div class="input-group">
+                <label for="applicationID">Application ID</label>
+                <input type="text" id="applicationID" placeholder="Enter application ID">
+            </div>
+            <div class="input-group">
+                <label for="reason">Rejection Reason</label>
+                <textarea placeholder="Enter your reason here..." type="text" id="reason" required></textarea>
+            </div>
+            <button onclick="updateStatus('rejected')">Submit</button>
+        </div>
+    </div>
+
     <div id="snackbar" class="snackbar"></div>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
